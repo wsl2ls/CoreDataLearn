@@ -293,7 +293,7 @@ http://www.jianshu.com/p/3e4f33b5b013
 http://blog.csdn.net/u013263917/article/details/53277708
 http://blog.csdn.net/u013263917/article/details/53277863
 
-示例Github：[CoreDataLearn](https://github.com/wslcmk/CoreDataLearn.git)
+简书：[iOS CoreData (一) 增删改查](http://www.jianshu.com/p/332cba029b95)
 
 
 欢迎扫描下方二维码关注——iOS开发进阶之路——微信公众号：iOS2679114653
