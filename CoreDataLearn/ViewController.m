@@ -29,7 +29,11 @@
     
     [self createSqlite];
     
-    
+    //查询所有数据的请求
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"Student"];
+    NSArray *resArray = [_context executeFetchRequest:request error:nil];
+    _dataSource = [NSMutableArray arrayWithArray:resArray];
+    [self.tableView reloadData];
 }
 
 
@@ -54,7 +58,7 @@
     NSURL *sqlUrl = [NSURL fileURLWithPath:sqlPath];
     
     NSError *error = nil;
-    //设置数据库相关信息 添加一个持久化存储库并设置类型和路径，NSSQLiteStoreType：SQLite作为存储库
+    //设置数据库相关信息 添加一个持久化存储库并设置存储类型和路径，NSSQLiteStoreType：SQLite作为存储库
     [store addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:sqlUrl options:nil error:&error];
     
     if (error) {
